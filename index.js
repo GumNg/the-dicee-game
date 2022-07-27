@@ -16,3 +16,11 @@ document.querySelector(`.dice .img1`).setAttribute(`src`, randomImg1);
 // select second dice img and change img src
 document.querySelector(`.dice .img2`).setAttribute(`src`, randomImg2);
 
+// changes title to display the winner
+if (randomNumber1 > randomNumber2) {
+    document.querySelector(`h1`).textContent = "🚩 Player 1 Wins!";
+} else if (randomNumber1 < randomNumber2) {
+    document.querySelector(`h1`).textContent = "Player 2 Wins! 🚩";
+} else {
+    document.querySelector(`h1`).textContent = "Draw!";
+};
